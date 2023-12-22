@@ -5,7 +5,14 @@ from django.views.decorators.http import require_GET
 import stripe
 from .models import Item
 
-stripe.api_key = "your_stripe_secret_key"
+import os
+from dotenv import load_dotenv
+
+# Import environment
+load_dotenv()
+
+STRIPE_API_KEY = os.environ.get('STRIPE_API_KEY')
+stripe.api_key = STRIPE_API_KEY
 
 
 @require_GET
