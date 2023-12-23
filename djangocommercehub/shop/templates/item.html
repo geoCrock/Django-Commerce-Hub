@@ -14,7 +14,7 @@
     <button id="buy-button">Buy</button>
 
     <script>
-        const stripe = Stripe('pk_test_51OQC6hJ13NpdtP62dhgulG3jkzQ65JGuevCS1OqwHB8dI1m5xOTYyhVQTdthVtelIIB9axWrDkv7xu9yCsy2z2pj002dtMxJ6w');
+        const stripe = Stripe('{{ STRIPE_API_KEY_PUBLIC }}');
 
         document.getElementById('buy-button').addEventListener('click', async () => {
             const response = await fetch(`${window.location.origin}/api/buy/{{ item.id }}`);

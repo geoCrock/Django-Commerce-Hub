@@ -11,8 +11,10 @@ from dotenv import load_dotenv
 # Import environment
 load_dotenv()
 
-STRIPE_API_KEY = os.environ.get('STRIPE_API_KEY')
-stripe.api_key = STRIPE_API_KEY
+STRIPE_API_KEY_PRIVATE = os.environ.get('STRIPE_API_KEY_PRIVATE')
+STRIPE_API_KEY_PUBLIC = os.environ.get('STRIPE_API_KEY_PUBLIC')
+
+stripe.api_key = STRIPE_API_KEY_PRIVATE
 
 
 def checkout_session(request, id):
@@ -46,5 +48,5 @@ def item_detail(request, id):
 
 def item(request, item_id):
     item = get_object_or_404(Item, id=item_id)
-    context = {'item': item}
+    context = {'item': item, 'STRIPE_API_KEY_PUBLIC': STRIPE_API_KEY_PUBLIC}
     return render(request, 'item.html', context)
