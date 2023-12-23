@@ -1,4 +1,4 @@
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_GET
@@ -41,7 +41,12 @@ def get_checkout_session(request, id):
     return JsonResponse({'session_id': session.id})
 
 
-@require_GET
 def item_detail(request, id):
     item = get_object_or_404(Item, id=id)
     return JsonResponse({'name': item.name, 'description': item.description, 'price': str(item.price)})
+
+
+def item(request, item_id):
+    item = get_object_or_404(Item, id=item_id)
+    context = {'item': item}
+    return render(request, 'item_detail.html', context)

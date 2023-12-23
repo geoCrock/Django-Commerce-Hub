@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ item.name }} - Item Detail</title>
+</head>
+<body>
+    <h1>{{ item.name }}</h1>
+    <p>Description: {{ item.description }}</p>
+    <p>Price: ${{ item.price }}</p>
+
+    <form method="post" action="{% url 'item_detail' item.id %}">
+        {% csrf_token %}
+        <button type="submit">Buy</button>
+    </form>
+</body>
+</html>
