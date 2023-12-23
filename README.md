@@ -41,9 +41,9 @@
 
 3. Установите зависимости:
 
-  ```bash
-  pip install -r requirements.txt
-  ```
+     ```bash
+       pip install -r requirements.txt
+     ```
 
 4. Создайте `.env` и положите туда ваши API ключи от Stripe:
 
@@ -93,13 +93,7 @@
      cd djangocommercehub
      ```
 
-3. Установите зависимости:
-
-  ```bash
-  pip install -r requirements.txt
-  ```
-
-4. Создайте `.env` и положите туда ваши API ключи от Stripe:
+3. Создайте `.env` и положите туда ваши API ключи от Stripe:
 
     Example:
      ```env
@@ -108,7 +102,7 @@
      STRIPE_API_KEY_PUBLIC = "STRIPE_API_KEY_PUBLIC"
      ```
   
-5. Создайте и запустите контейнеры Docker:
+4. Создайте и запустите контейнеры Docker:
 
      ```bash
      docker-compose up --build
