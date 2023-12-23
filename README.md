@@ -47,7 +47,6 @@
 
 4. Создайте `.env` и положите туда ваши API ключи от Stripe:
 
-    Example:
      ```env
      STRIPE_API_KEY_PRIVATE = "STRIPE_API_KEY_PRIVATE"
     
@@ -95,7 +94,6 @@
 
 3. Создайте `.env` и положите туда ваши API ключи от Stripe:
 
-    Example:
      ```env
      STRIPE_API_KEY_PRIVATE = "STRIPE_API_KEY_PRIVATE"
     
