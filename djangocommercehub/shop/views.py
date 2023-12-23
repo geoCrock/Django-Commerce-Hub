@@ -49,4 +49,4 @@ def item_detail(request, id):
 def item(request, item_id):
     item = get_object_or_404(Item, id=item_id)
     context = {'item': item}
-    return render(request, 'item_detail.html', context)
+    return render(request, 'item.html', context)
