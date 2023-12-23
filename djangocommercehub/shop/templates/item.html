@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ item.name }} - Item Detail</title>
+    <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
     <h1>{{ item.name }}</h1>
     <p>Description: {{ item.description }}</p>
     <p>Price: ${{ item.price }}</p>
 
-    <form method="post" action="{% url 'checkout_session' item.id %}">
-        {% csrf_token %}
-        <button type="submit">Buy</button>
-    </form>
+    <button id="buy-button">Buy</button>
+
+    <script>
+        const stripe = Stripe('pk_test_51OQC6hJ13NpdtP62dhgulG3jkzQ65JGuevCS1OqwHB8dI1m5xOTYyhVQTdthVtelIIB9axWrDkv7xu9yCsy2z2pj002dtMxJ6w');
+
+        document.getElementById('buy-button').addEventListener('click', async () => {
+            const response = await fetch(`${window.location.origin}/api/buy/{{ item.id }}`);
+            const result = await response.json();
+
+            // Redirect to the Stripe Checkout page
+            stripe.redirectToCheckout({ sessionId: result.session_id });
+        });
+    </script>
 </body>
 </html>
