@@ -15,9 +15,7 @@ STRIPE_API_KEY = os.environ.get('STRIPE_API_KEY')
 stripe.api_key = STRIPE_API_KEY
 
 
-@require_GET
-@csrf_exempt
-def get_checkout_session(request, id):
+def checkout_session(request, id):
     item = get_object_or_404(Item, id=id)
 
     session = stripe.checkout.Session.create(
