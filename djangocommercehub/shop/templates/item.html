@@ -17,7 +17,7 @@
         const stripe = Stripe('{{ STRIPE_API_KEY_PUBLIC }}');
 
         document.getElementById('buy-button').addEventListener('click', async () => {
-            const response = await fetch(`${window.location.origin}/api/buy/{{ item.id }}`);
+            const response = await fetch(`${window.location.origin}/buy/{{ item.id }}`);
             const result = await response.json();
 
             // Redirect to the Stripe Checkout page
