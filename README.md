@@ -72,7 +72,7 @@
        pip install -r requirements.txt
      ```
 
-4. Создайте `.env` и положите туда ваши API ключи от Stripe:
+4. Создайте `.env` файл и положите туда ваши API ключи от Stripe:
 
      ```env
      STRIPE_API_KEY_PRIVATE = "STRIPE_API_KEY_PRIVATE"
@@ -119,7 +119,7 @@
      cd djangocommercehub
      ```
 
-3. Создайте `.env` и положите туда ваши API ключи от Stripe:
+3. Создайте `.env` файл и положите туда ваши API ключи от Stripe:
 
      ```env
      STRIPE_API_KEY_PRIVATE = "STRIPE_API_KEY_PRIVATE"
