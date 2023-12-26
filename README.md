@@ -56,7 +56,7 @@
 1. Скопируйте репозиторий:
 
      ```bash
-     git clone https://github.com/geoCrock/Django-Commerece-Hub.git
+     git clone https://github.com/geoCrock/Django-Commerce-Hub.git
      ```
 
 2. Войдите в корень проекта:
@@ -109,7 +109,7 @@
 1. Скопируйте репозиторий:
 
      ```bash
-     git clone https://github.com/geoCrock/Django-Commerece-Hub.git
+     git clone https://github.com/geoCrock/Django-Commerce-Hub.git
      ```
 
 2. Войдите в корень проекта:
