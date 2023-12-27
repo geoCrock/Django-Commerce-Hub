@@ -83,11 +83,11 @@
 5. Сделайте миграции и запустите проект:
    
     ```bash
-     python manage.py makemigrations
+    python manage.py makemigrations
      ```
 
     ```bash
-     python manage.py migrate
+    python manage.py migrate
      ```
 
     ```bash
