@@ -68,7 +68,7 @@
 3. Установите зависимости:
 
      ```bash
-       pip install -r requirements.txt
+     pip install -r requirements.txt
      ```
 
 4. Создайте `.env` файл и положите туда ваши API ключи от Stripe:
