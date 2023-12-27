@@ -58,19 +58,28 @@
      git clone https://github.com/geoCrock/Django-Commerce-Hub.git
      ```
 
-2. Войдите в корень проекта:
+2. Войдите в корень проекта и создайте `venv`:
 
      ```bash
      cd djangocommercehub
      ```
 
-3. Установите зависимости:
+     ```bash
+     python -m venv venv
+     ```
+     или
+
+     ```bash
+     source venv/bin/activate
+     ```
+
+4. Установите зависимости:
 
      ```bash
      pip install -r requirements.txt
      ```
 
-4. Создайте `.env` файл и положите туда ваши API ключи от Stripe:
+5. Создайте `.env` файл и положите туда ваши API ключи от Stripe:
 
      ```env
      STRIPE_API_KEY_PRIVATE = "STRIPE_API_KEY_PRIVATE"
@@ -79,7 +88,7 @@
      ```
 
 
-5. Сделайте миграции и запустите проект:
+6. Сделайте миграции и запустите проект:
    
     ```bash
     python manage.py makemigrations
