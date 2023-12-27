@@ -91,7 +91,7 @@
      ```
 
     ```bash
-     python manage.py runserver
+    python manage.py runserver
      ```
    
 7. Приложение доступно на http://127.0.0.0:8000.
