@@ -1,19 +1,4 @@
 # Django Commerce Hub
-Test task from the company "LLC Simple Solutions".
-
-All basic functionality has been completed, as well as bonuses:
-
-· Running using Docker
-
-· Using environment variables
-
-· View Django Models in the Django Admin panel
-
-
-The application is containerized using Docker and managed using Docker Compose.
-
-
-## Description
 
 The Django Commerce Hub project is an integrated solution for providing secure and convenient online payments in your online store using the Stripe service.
 
