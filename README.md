@@ -1,141 +1,141 @@
 # Django Commerce Hub
-Тестовое задание от компании "ООО Простые решения".
+Test task from the company "LLC Simple Solutions".
 
-Выполнен весь основной функционал, а так же бонусы:
+All basic functionality has been completed, as well as bonuses:
 
-· 	Запуск используя Docker 
+· Running using Docker
 
-· 	Использование environment variables 
+· Using environment variables
 
-· 	Просмотр Django Моделей в Django Admin панели 
-
-
-Приложение помещается в контейнер с помощью Docker и управляется с помощью Docker Compose.
+· View Django Models in the Django Admin panel
 
 
-## Описание
+The application is containerized using Docker and managed using Docker Compose.
 
-Проект "Django Commerce Hub" представляет собой интегрированное решение для обеспечения безопасных и удобных онлайн-платежей в вашем интернет-магазине с использованием сервиса Stripe.
 
-Основные функции:
+## Description
 
-- Множество товаров: Возможность добавления и отображения различных товаров с их описанием, ценой и уникальным идентификатором.
+The Django Commerce Hub project is an integrated solution for providing secure and convenient online payments in your online store using the Stripe service.
 
-- Stripe Checkout: Интеграция с Stripe API для обеспечения безопасных платежей. Клиенты могут легко оформлять покупки с использованием платежных карт.
+Main functions:
 
-- Детализация товара: Просмотр деталей о выбранном товаре на отдельной странице, включая описание и кнопку "Buy" для перехода к оформлению заказа.
+- Multiple products: Ability to add and display various products with their description, price and unique identifier.
 
-- Оптимизированный процесс оплаты: Перенаправление клиентов на удобную и безопасную страницу Checkout от Stripe для завершения оплаты.
+- Stripe Checkout: Integration with Stripe API to ensure secure payments. Customers can easily make purchases using payment cards.
 
-- Управление заказами: Возможность создания и управления заказами, объединяя несколько товаров в один заказ.
+- Product Details: View details about the selected product on a separate page, including a description and a "Buy" button to proceed to checkout.
 
-Преимущества:
+- Streamlined checkout process: Redirect customers to Stripe's convenient and secure Checkout page to complete payment.
 
-- Простота интеграции: Легко добавьте функционал оплаты в ваш интернет-магазин с минимальными усилиями.
+- Order Management: Ability to create and manage orders, combining multiple products into one order.
 
-- Безопасные транзакции: Используйте мощные инструменты безопасности Stripe для защиты платежных данных клиентов.
+Advantages:
 
-- Удобный пользовательский опыт: Обеспечьте вашим клиентам удобство и простоту при оформлении заказов.
+- Easy integration: Easily add payment functionality to your online store with minimal effort.
 
-- Этот проект создан с использованием Django и Stripe API, предоставляя вам прочное и надежное решение для принятия онлайн-платежей в вашем интернет-магазине.
+- Secure transactions: Use Stripe's powerful security tools to protect customer payment information.
 
-## Использование
+- Convenient user experience: Provide your customers with convenience and ease when placing orders.
 
-Для начала создайте объекты `Item`
+- This project is built using Django and Stripe API, providing you with a robust and reliable solution for accepting online payments for your online store.
 
-- Используйте `/item/{id}` чтобы перейти на страничку с товаром.
-- Нажмите кнопку `buy` чтобы пеейти к оплате товара.
+## Usage
 
-- Используйте `/buy/{id}` чтобы получить session id.
+First, create `Item` objects
 
-## Запуск
+- Use `/item/{id}` to go to the product page.
+- Click the `buy` button to proceed to payment for the goods.
 
-Не забудьте создать виртуальное окружение `venv`
+- Use `/buy/{id}` to get the session id.
 
-1. Скопируйте репозиторий:
+## Launch
 
-     ```bash
-     git clone https://github.com/geoCrock/Django-Commerce-Hub.git
-     ```
+Don't forget to create a virtual environment `venv`
 
-2. Войдите в корень проекта и создайте `venv`:
+1. Copy the repository:
 
-     ```bash
-     cd djangocommercehub
-     ```
+      ```bash
+      git clone https://github.com/geoCrock/Django-Commerce-Hub.git
+      ```
 
-     ```bash
-     python -m venv venv
-     ```
-     или
+2. Go to the project root and create a `venv`:
 
-     ```bash
-     source venv/bin/activate
-     ```
+      ```bash
+      cd djangocommercehub
+      ```
 
-4. Установите зависимости:
+      ```bash
+      python -m venv venv
+      ```
+      or
 
-     ```bash
-     pip install -r requirements.txt
-     ```
+      ```bash
+      source venv/bin/activate
+      ```
 
-5. Создайте `.env` файл и положите туда ваши API ключи от Stripe:
+4. Install dependencies:
 
-     ```env
-     STRIPE_API_KEY_PRIVATE = "STRIPE_API_KEY_PRIVATE"
+      ```bash
+      pip install -r requirements.txt
+      ```
+
+5. Create a `.env` file and put your Stripe API keys there:
+
+      ```env
+      STRIPE_API_KEY_PRIVATE = "STRIPE_API_KEY_PRIVATE"
     
-     STRIPE_API_KEY_PUBLIC = "STRIPE_API_KEY_PUBLIC"
-     ```
+      STRIPE_API_KEY_PUBLIC = "STRIPE_API_KEY_PUBLIC"
+      ```
 
 
-6. Сделайте миграции и запустите проект:
+6. Make migrations and run the project:
    
-    ```bash
-    python manage.py makemigrations
-     ```
+     ```bash
+     python manage.py makemigrations
+      ```
 
-    ```bash
-    python manage.py migrate
-     ```
+     ```bash
+     python manage.py migrate
+      ```
 
-    ```bash
-    python manage.py runserver
-     ```
+     ```bash
+     python manage.py runserver
+      ```
    
-7. Приложение доступно на http://127.0.0.0:8000.
+7. The application is available at http://127.0.0.0:8000.
 
 
 
-##  Запуск через Docker
+## Running via Docker
 
-Убедитесь, что в вашей системе установлены следующие компоненты:
+Make sure the following components are installed on your system:
 
 - Docker
 - Docker Compose
 
 
-1. Скопируйте репозиторий:
+1. Copy the repository:
 
-     ```bash
-     git clone https://github.com/geoCrock/Django-Commerce-Hub.git
-     ```
+      ```bash
+      git clone https://github.com/geoCrock/Django-Commerce-Hub.git
+      ```
 
-2. Войдите в корень проекта:
+2. Login to the project root:
 
-     ```bash
-     cd djangocommercehub
-     ```
+      ```bash
+      cd djangocommercehub
+      ```
 
-3. Создайте `.env` файл и положите туда ваши API ключи от Stripe:
+3. Create a `.env` file and put your Stripe API keys there:
 
-     ```env
-     STRIPE_API_KEY_PRIVATE = "STRIPE_API_KEY_PRIVATE"
+      ```env
+      STRIPE_API_KEY_PRIVATE = "STRIPE_API_KEY_PRIVATE"
     
-     STRIPE_API_KEY_PUBLIC = "STRIPE_API_KEY_PUBLIC"
-     ```
+      STRIPE_API_KEY_PUBLIC = "STRIPE_API_KEY_PUBLIC"
+      ```
   
-4. Создайте и запустите контейнеры Docker:
+4. Create and run Docker containers:
 
-     ```bash
-     docker-compose up --build
-     ```
+      ```bash
+      docker-compose up --build
+      ```
