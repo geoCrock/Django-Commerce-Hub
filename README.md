@@ -118,7 +118,7 @@ Make sure the following components are installed on your system:
     
       STRIPE_API_KEY_PUBLIC = "STRIPE_API_KEY_PUBLIC"
       ```
-  
+
 4. Create and run Docker containers:
 
       ```bash
